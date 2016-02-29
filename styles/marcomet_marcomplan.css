@@ -1,0 +1,511 @@
+.budgetline
+{
+	text-decoration:none;
+	background-color : transparent;
+	font : bold 10pt Arial, Verdana, Geneva;
+	height: 12pxcolor : Navy;
+	border-right-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+	text-align : right;
+}
+.redbudgetline
+{
+   color:red;
+	text-decoration:none;
+	background-color : transparent;
+	font : bold 10pt Arial, Verdana, Geneva;
+	height: 12pxcolor : Red;
+	border-right-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+		text-align : right;
+}
+A.redbudgetline:link
+{
+   color:red;
+	text-decoration:none;
+	background-color : transparent;
+	font : bold 10pt Arial, Verdana, Geneva;
+	height: 12pxcolor : Red;
+	border-right-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+		text-align : right;
+}
+.budgetline_bottom
+{
+	text-decoration:none;
+	background-color : transparent;
+	font : bold 10pt Arial, Verdana, Geneva;
+	height: 12pxcolor : Navy;
+	border-right-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+	border-bottom-color : Black;
+	border-bottom-style : solid;
+	border-bottom-width : 1px;
+		text-align : right;
+}
+.budgetline_finalbottom
+{
+	text-decoration:none;
+	background-color : transparent;
+	font : bold 10pt Arial, Verdana, Geneva;
+	height: 12pxcolor : Navy;
+	border-right-color : Black;
+	border-left-style : solid;
+	border-left-width : 1px;
+	border-left-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+	border-bottom-color : Black;
+	border-bottom-style : double;
+	border-bottom-width : 3px;
+		text-align : right;
+}
+.initline
+{
+	color:black;
+	text-decoration:none;
+	background-color : Silver;
+	font : bold 9pt Arial, Verdana, Geneva;
+	height: 12px;
+	border-right-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+		text-align : right;
+}
+.projectline
+{
+	text-decoration:none;
+	background-color : transparent;
+	font : bold 9pt Arial, Verdana, Geneva;
+	height: 12px;
+	color : Navy;
+	border-top-color : Black;
+	border-top-style : solid;
+	border-top-width : 1px;
+	border-right-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+		text-align : right;
+}
+.jobline
+{
+	text-decoration:none;
+	background-color : transparent;
+	font : 9pt Arial, Verdana, Geneva;
+	height: 12px;
+	color : Navy;
+	border-right-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+		text-align : right;
+}
+.redinitline
+{
+	color:red;
+	text-decoration:none;
+	background-color : Silver;
+	font : bold 9pt Arial, Verdana, Geneva;
+	height: 12px;
+	border-right-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+		text-align : right;
+}
+.redprojectline
+{
+    color:red;	
+    text-decoration:none;
+	background-color : transparent;
+	font : bold 9pt Arial, Verdana, Geneva;
+	height: 12px;
+	border-top-color : Black;
+	border-top-style : solid;
+	border-top-width : 1px;
+	border-right-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+		text-align : right;
+}
+.redjobline
+{
+    color:red;
+	text-decoration:none;
+	background-color : transparent;
+	font : 9pt Arial, Verdana, Geneva;
+	height: 12px;
+	border-right-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+		text-align : right;
+}
+.redbudgetline_bottom
+{
+color:red;
+	text-decoration:none;
+	background-color : transparent;
+	font : bold 10pt Arial, Verdana, Geneva;
+	height: 12px;
+	border-right-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+	border-bottom-color : Black;
+	border-bottom-style : solid;
+	border-bottom-width : 1px;
+		text-align : right;
+}
+.redbudgetline_finalbottom
+{
+color:red;
+	text-decoration:none;
+	background-color : transparent;
+	font : bold 10pt Arial, Verdana, Geneva;
+	height: 12px;
+	border-right-color : Black;
+	border-left-style : solid;
+	border-left-width : 1px;
+	border-left-color : Black;
+	border-right-style : solid;
+	border-right-width : 1px;
+	padding : 0 2px 0 2px;
+	border-bottom-color : Black;
+	border-bottom-style : double;
+	border-bottom-width : 3px;
+		text-align : right;
+}
+.whitebutton
+{
+	border-style: solid;
+	border-width : 1px 1px 1px 1 px;
+	font-weight: bold;
+	color:black;
+	font-size:8pt;
+	border-color: #A9A9A9 #A9A9A9;
+	font-family:Arial,Verdana,Geneva;
+	text-decoration:none;
+	background-color : transparent;
+	font : bold;
+	text-align : center;
+	width : 10%;
+}
+.over 
+{
+	border-style: solid;
+	border-width=thin;
+	border-color: white white black black;
+	font-weight: bold;
+	color: Yellow;
+	width : 8%;
+	font-size:8pt;
+	font-family:Arial,Verdana,Geneva;
+	text-decoration:none;
+	background-color : Gray;
+	text-align : center;
+	border-width : 1px 1px 1px 1 px;
+	text-indent : 5px;
+}
+.out 
+{ border-style: solid; 
+border-color: gray; 
+border-width=thin }
+
+A:link {
+	text-decoration: none;
+	color : Navy;
+	font-family : Arial;
+}
+A:active {
+	color: Red;
+}
+A:visited{
+font-weight: bold;
+	font-family:Arial,Verdana,Geneva;
+	text-decoration:none;
+}
+A:hover{
+	color: Red;
+}
+A.inlineLink {
+	color:maroon;
+	font-size: 10pt;
+	font-weight:bold;
+	font-family:Arial,Verdana,Geneva;
+	text-decoration:none;
+}
+
+                        A.inlineLink:hover {
+                            color:red;
+                        }
+
+A.label {
+                            color:black;
+                            font-size:10pt;
+                            font-weight:bold;
+                            font-family:Arial, Verdana, Geneva;
+                            text-decoration:none;
+; height: 12px
+                        }
+
+                        A.label:hover {
+	color:red;
+	cursor: help;
+}
+	A.lineitems {
+                            color:black;
+                            font-size:10pt;
+                            font-weight:bold;
+                            font-family:Arial, Verdana, Geneva;
+                            text-decoration:none;
+                        }
+
+                        A.lineitems:hover {
+	color:red;
+	cursor : text;
+}					
+A.blackbutton {
+	color:Red;
+	font-size:8pt;
+font-family:Arial,Verdana,Geneva;
+	text-decoration:none;
+	border-style: ridge;
+	border : thick ridge Black;
+	background:black;
+	font : bold;
+}
+
+                        A.blackbutton:hover {
+	color: #EEE8AA;
+	letter-spacing: .75 px;
+	background-color : Dark Gray;
+}
+A.graybutton {
+	color:black;
+	font-size:8pt;
+	font-family:Arial,Verdana,Geneva;
+	text-decoration:none;
+	border-style: inset none none inset;
+	background-color : #A9A9A9;
+	font : bolder;
+	border-color : Silver;
+}
+
+               A.graybutton:hover {
+	color: yellow;
+	letter-spacing:.75 px;
+	border-left : thin inset White;
+	border-top : thin inset White;
+}
+
+TD.maintitle{
+		font-family : Arial;
+	font-weight : bolder;
+	font-size : 12pt;
+		color : Maroon;
+}
+
+td.numbercolumn {
+	color:black;
+	font-size:9pt;
+	font-family:Arial, Verdana, Geneva;
+	text-decoration:none;
+	text-align : right;
+	border : thin ridge;
+		padding :0 px 3px 0px 3px;
+}
+td.lineitems {
+                            color:black;
+                            font-size:9pt;
+                            font-weight:bold;
+                            font-family:Arial, Verdana, Geneva;
+							border : thin ridge;
+								padding : 0px 0px 0px 3px;
+                        }
+
+TD.subtitle{
+			font-family : Arial;
+	font-weight : bolder;
+	font-size : 11pt;
+		color : Black;
+}
+
+ TD.label{
+	font-family : Arial;
+	font-weight : bolder;
+	font-size : 10pt;
+	color:maroon;
+}
+ TD.labelalignright{
+	font-family : Arial;
+	font-weight : bolder;
+	font-size : 10pt;
+	color:maroon;
+	text-align : right;
+}
+ TD.labelright{
+	font-family : Arial;
+	font-size : 9pt;
+	color:black;
+	text-align : right;
+	vertical-align : top;
+	padding-right : 6px;
+}
+ TD.pullquote{
+	font-family : Arial;
+	font-size : 9pt;
+	font : italic;
+}
+span.pullquote{
+	font-family : Arial;
+	font-size : 9pt;
+	font : italic;
+}
+.stepnumbers {
+	font-family : Arial;
+	font-weight : bolder;
+	font-size : 14pt;
+	background-color : Maroon;
+	color : White;
+		text-align : center;}
+		
+.stepnumbers:hover{
+		color : Red;
+}
+.steptext {
+	font-family : Arial;
+	font-size : 10pt;
+	background : #FFFF99;
+	color : Maroon;
+		text-align : center;
+}
+.completedStepnumbers {
+	font-family : Arial;
+	font-weight : bolder;
+	font-size : 14pt;
+	background : Maroon;
+	color : Yellow;
+	text-align : center;
+}
+P.maintitle{
+		font-family : Arial;
+	font-weight : bolder;
+	font-size : 12pt;
+		color : Maroon;
+}
+P.subtitle{
+			font-family : Arial;
+	font-weight : bolder;
+	font-size : 11pt;
+		color : Black;
+}
+P.body{
+			font-family : Arial, Helvetica, sans-serif;
+	font-size : 9pt;
+		color : Black;
+; vertical-align: top
+; font-style: normal; font-weight: normal; font-variant: normal
+}
+table.spreadsheet{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 8pt;
+	color : Black;
+	vertical-align: top;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	border : thin ridge;
+	padding-bottom : 0px;
+	padding-top : 0px;
+	padding-right : 0px;
+	padding-left : 0px;
+		background-color : #DCDCDC;
+}
+table.lineitem{
+	font-family : Arial, Helvetica, sans-serif;
+		background-color : white;
+	font-size : 8pt;
+	color : Black;
+	vertical-align: top;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	cellspacing: 0;
+}.step {  font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; background-color: #FFFF00}
+.stepnot { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; background-color: #999999}
+.planheader1 {
+	font-family: Arial;
+	font-size: 8pt;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: Gray;
+	border: solid;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	border-width: 1px 1px 1px 1px;
+	border-color: Black Black Black Black;
+}
+a.planheader1 {
+	font-family: Arial;
+	font-size: 8pt;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: Gray;
+	border: solid;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+a.planheader2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000000;
+	background-color: Silver;
+	border: solid;
+	text-decoration: none;
+	text-align: center;
+	border-width: 1px 1px 1px 1px;
+	border-color: #000000 black #000000 #000000
+}
+.planheader2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000000;
+	background-color: Silver;
+	border: solid;
+	text-decoration: none;
+	text-align: center;
+	border-width: 1px 1px 1px 1px;
+	border-color: #000000 black #000000 #000000
+}
+

@@ -1,0 +1,89 @@
+<Context path="/" reloadable="true" DocBase="/home/webadmin/marcometws.virtual.vps-host.net/html" swallowOutput="True">
+
+  <Logger  className="org.apache.catalina.logger.FileLogger"
+            prefix="marcometContext" 
+            suffix=".log"            
+            timestamp="true" />
+
+  <Resource name="jdbc/marcomet" 
+               auth="Container" 
+               type="javax.sql.DataSource"
+                removeAbandoned="true" 
+		removeAbandonedTimeout="120" 
+		logAbandoned="true" />
+
+  <ResourceParams name="jdbc/marcomet">
+    <parameter>
+      <name>factory</name>
+      <value>org.apache.commons.dbcp.BasicDataSourceFactory</value>
+    </parameter>
+
+    <!-- Maximum number of dB connections in pool. Make sure you
+         configure your DB max_connections large enough to handle
+         all of your db connections. Set to 0 for no limit.
+         -->
+    <parameter>
+      <name>maxActive</name>
+      <value>30</value>
+    </parameter>
+
+    <!-- Maximum number of idle dB connections to retain in pool.
+         Set to -1 for no limit.  See also the DBCP documentation on this
+         and the minEvictableIdleTimeMillis configuration parameter.
+         -->
+    <parameter>
+      <name>maxIdle</name>
+      <value>5</value>
+    </parameter>
+
+    <!-- Maximum time to wait for a dB connection to become available
+         in ms, in this example 10 seconds. An Exception is thrown if
+         this timeout is exceeded.  Set to -1 to wait indefinitely.
+         -->
+    <parameter>
+      <name>maxWait</name>
+      <value>10000</value>
+    </parameter>
+
+<!-- Alternate Abandoned Parameters 
+     <parameter>
+        <name>removeAbandoned</name>
+        <value>true</value>
+     </parameter>
+     <parameter>
+       <name>removeAbandonedTimeout</name>
+       <value>90</value>
+     </parameter>
+     <parameter>
+        <name>logAbandoned</name>
+        <value>false</value>
+     </parameter>
+-->
+
+    <!-- dB username and password for dB connections  -->
+    <parameter>
+     <name>username</name>
+     <value>mysql</value>
+    </parameter>
+    <parameter>
+     <name>password</name>
+     <value>mt9782$$</value>
+    </parameter>
+
+        
+    <!-- Class name for the official JDBC Connector/J driver -->
+    <parameter>
+       <name>driverClassName</name>     
+	<value>org.gjt.mm.mysql.Driver</value> 
+    </parameter>
+    
+    <!-- The JDBC connection url for connecting to your DB. -->
+    <parameter>
+      <name>url</name>      
+	<value>jdbc:mysql://marcometdb.virtual.vps-host.net:3306/marcomet</value> 
+
+    </parameter>
+  </ResourceParams>
+
+
+</Context>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+<tlibversion>1.5</tlibversion>
+<jspversion>1.1</jspversion>
+<shortname>Download taglib</shortname>
+<uri>http://www.servletsuite.com/servlets/dloadtag</uri>
+<info>Download taglib</info>
+
+<tag>
+<name>download</name>
+<tagclass>com.cj.download.downloadTag</tagclass>
+<bodycontent>empty</bodycontent>
+<info>Downloads file</info>
+
+<attribute>
+<name>file</name>
+<required>true</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+
+<attribute>
+<name>dir</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+
+<attribute>
+<name>compress</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+
+<attribute>
+<name>inline</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+
+<attribute>
+<name>contentType</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+
+<attribute>
+<name>disposition</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+
+</tag>
+
+</taglib>

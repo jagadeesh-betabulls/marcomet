@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"  "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+  <tlibversion>1.0</tlibversion>
+  <jspversion>1.1</jspversion>
+  <shortname>jobHeaders</shortname>
+
+  <tag>
+    <name>JobHeaderTag</name>
+    <tagclass>com.marcomet.taglibs.JobHeaderTag</tagclass>
+    <info>This tag generates the headers for the workflow forms.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <name>CompFilesTag</name>
+    <tagclass>com.marcomet.taglibs.CompFilesTag</tagclass>
+    <info>This tag generates a tabular listing of comp files.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <name>ProductionFilesTag</name>
+    <tagclass>com.marcomet.taglibs.ProductionFilesTag</tagclass>
+    <info>This tag generates a tabular listing of production files.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <name>WorkingFilesTag</name>
+    <tagclass>com.marcomet.taglibs.WorkingFilesTag</tagclass>
+    <info>This tag generates a tabular listing of working files.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <name>PricingGridTag</name>
+    <tagclass>com.marcomet.taglibs.PricingGridTag</tagclass>
+    <teiclass>com.marcomet.taglibs.PricingGridTEI</teiclass>
+    <info>This tag generates the catalog pricing grids.  It outputs a series of tr's</info>
+    <attribute>
+      <name>productCode</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>catJobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>contactId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>vendorId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tierId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>siteHostId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>catalogPage</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>proxyEnabled</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- Tom's Tag Section. KEEP OUT!!! :)  -->
+
+<!-- Lookup Table Tags -->
+  <tag>
+    <name>LUDropDownTag</name>
+    <tagclass>com.marcomet.taglibs.LUDropDownTag</tagclass>
+    <info>This tag generates the drop down associated with lu tables for forms.</info>
+    <attribute>
+      <name>dropDownName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>table</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>selected</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>key</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>extra</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!--- Added by Ed C to accomodate non-standard table value fields and sorts -->
+  <tag>
+    <name>LUCustomDropDownTag</name>
+    <tagclass>com.marcomet.taglibs.LUCustomDropDownTag</tagclass>
+    <info>This tag generates the drop down associated with lu tables for forms.</info>
+    <attribute>
+      <name>dropDownName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>orderbyField</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>valueField</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>table</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>selected</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>key</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>extra</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- Form elements -->
+
+    <tag>
+      <name>GenericDropDownTag</name>
+      <tagclass>com.marcomet.taglibs.GenericDropDownTag</tagclass>
+      <info>This tag creates a dropdown for any database table.</info>
+      <attribute>
+        <name>dropDownName</name>
+        <required>false</required>
+        <rtexprvalue>true</rtexprvalue>
+      </attribute>	
+      <attribute>
+        <name>extra</name>
+        <required>false</required>
+        <rtexprvalue>true</rtexprvalue>
+      </attribute>	
+      <attribute>
+        <name>dropDownName</name>
+        <required>false</required>
+        <rtexprvalue>true</rtexprvalue>
+      </attribute>	
+      <attribute>
+        <name>orderBy</name>
+        <required>false</required>
+        <rtexprvalue>true</rtexprvalue>
+      </attribute>	
+      <attribute>
+        <name>returnId</name>
+        <required>false</required>
+        <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+        <name>returnValue</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+      </attribute>	
+      <attribute>
+        <name>selected</name>
+        <required>false</required>
+        <rtexprvalue>true</rtexprvalue>
+      </attribute>	
+      <attribute>
+        <name>table</name>
+        <required>false</required>
+        <rtexprvalue>true</rtexprvalue>
+     </attribute>
+  </tag>  	
+
+  <tag>
+    <name>LUTableValueTag</name>
+    <tagclass>com.marcomet.taglibs.LUTableValueTag</tagclass>
+    <info>This tag converts the id of lu table to the string value of name.</info>
+    <attribute>
+      <name>selected</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>table</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>DropDownDateTag</name>
+    <tagclass>com.marcomet.taglibs.DropDownDateTag</tagclass>
+    <info>This tag generates a set of drop downs for date input.</info>
+    <attribute>
+      <name>selectedDay</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>selectedMonth</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>selectedYear</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>extraCode</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- Job information tags -->
+  <tag>
+    <name>JobStatusSmallTableTag</name>
+    <tagclass>com.marcomet.taglibs.JobStatusSmallTableTag</tagclass>
+    <info>This tag generates the Job Status information on pages like JobDetails.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>isVendor</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tableWidth</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>JobSpecsTag</name>
+    <tagclass>com.marcomet.taglibs.JobSpecsTag</tagclass>
+    <info>This tag generates the Job Spec information on pages like JobDetails.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tableWidth</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>JobChangesTag</name>
+    <tagclass>com.marcomet.taglibs.JobChangesTag</tagclass>
+    <info>This tag generates a table containing job change information on pages.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tableWidth</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>JobPriceDetailVendorTag</name>
+    <tagclass>com.marcomet.taglibs.JobPriceDetailVendorTag</tagclass>
+    <info>This tag generates a table containing job specs and changes information on pages.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tableWidth</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>JobPriceDetailCustomerTag</name>
+    <tagclass>com.marcomet.taglibs.JobPriceDetailCustomerTag</tagclass>
+    <info>This tag generates a table containing job specs and changes information on pages. Customer version</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tableWidth</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>JobTaxInformationTag</name>
+    <tagclass>com.marcomet.taglibs.JobTaxInformationTag</tagclass>
+    <info>This tag generates a table containing job tax information on pages.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tableWidth</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>JobShippingDetailTag</name>
+    <tagclass>com.marcomet.taglibs.JobShippingDetailTag</tagclass>
+    <info>This tag generates a table containing job shipping information on pages.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tableWidth</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>isVendor</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>JobInvoiceTableTag</name>
+    <tagclass>com.marcomet.taglibs.JobInvoiceTableTag</tagclass>
+    <info>This tag generates a table containing job invoice/collections information on pages.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tableWidth</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>isVendor</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>JobAccountPayableVendorTag</name>
+    <tagclass>com.marcomet.taglibs.JobAccountPayableVendorTag</tagclass>
+    <info>This tag generates a table containing vendor ap information for that job.</info>
+    <attribute>
+      <name>jobId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tableWidth</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- Catalog Tags -->
+  <tag>
+    <name>SiteVendorOfferingsTag</name>
+    <tagclass>com.marcomet.taglibs.SiteVendorOfferingsTag</tagclass>
+    <info>This tag generates a table containing vendor offerings based on site host input.</info>
+    <attribute>
+      <name>siteHostId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tableWidth</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>cellHeight</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+<!-- Minder Tags -->
+
+  <tag>
+    <name>MinderVendorTableTag</name>
+    <tagclass>com.marcomet.taglibs.MinderVendorTableTag</tagclass>
+    <info>This tag generates a table containing all jobs for Vendor.</info>
+    <attribute>
+      <name>companyId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>actionFilter</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>companyFilter</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>siteHostFilter</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>MinderSiteHostTableTag</name>
+    <tagclass>com.marcomet.taglibs.MinderSiteHostTableTag</tagclass>
+    <info>This tag generates a table containing all jobs for site host.</info>
+    <attribute>
+      <name>companyId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>vendorFilter</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>companyFilter</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>MinderBuyerTableTag</name>
+    <tagclass>com.marcomet.taglibs.MinderBuyerTableTag</tagclass>
+    <info>This tag generates a table containing all jobs for site host.</info>
+    <attribute>
+      <name>userProfile</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>siteHostSettings</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+</taglib>

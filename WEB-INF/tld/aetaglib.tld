@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+        <tlibversion>2.5</tlibversion>
+        <jspversion>1.1</jspversion>
+        <shortname>ae</shortname>
+        <uri></uri>
+        <info>Activedit Tag library</info>
+<!-- Activedit tag -->     
+        <tag>  
+		<name>activedit</name>
+		<tagclass>ae.taglib.Activedit</tagclass>
+		<bodycontent>jsp</bodycontent>
+		<info> A ACTIVEDIT TAG</info>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+                </attribute>
+                <attribute>
+               		<name>inc</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>imageurl</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>imagepath</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>baseurl</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>image</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>toolbar</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>tabview</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>upload</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>alloweditsource</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>border</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>height</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>width</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>buttoncolor</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>breakonenter</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+                <attribute>
+               		<name>defaultfont</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+	        </attribute>
+	</tag>
+<!--  Recurse Tag used in image upload -->	
+	  <tag>   
+                <name>recursedir</name>
+                <tagclass>ae.taglib.RecurseDir</tagclass>
+                <bodycontent>empty</bodycontent>
+                <info>A Recurse Directory Tag</info>
+                <attribute>
+                        <name>basepath</name>
+                        <required>false</required>
+                        <rtexprvalue>true</rtexprvalue>
+                </attribute>
+		<attribute>
+			<name>subdir</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			</attribute>
+		
+         </tag>
+
+</taglib>

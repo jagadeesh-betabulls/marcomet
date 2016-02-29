@@ -1,0 +1,178 @@
+PS-Resources-1.0 
+ 
+% This is a sample UPR file for use with PDFlib. The complete description 
+% of the UPR file format can be found in the PDFlib manual. 
+% All resources can also be set at runtime via PDF_set_parameter(). 
+% Some resources will also be search in the Windows registry. 
+ 
+ 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% List of all resource categories which are specified in the file 
+ 
+SearchPath 
+FontAFM 
+FontPFM 
+FontOutline 
+Encoding 
+ICCProfile 
+StandardOutputIntent 
+. 
+ 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% The SearchPath section. 
+% PDFlib will search for any files (font, PDFs, ICC profiles, images) 
+% in all the directories listed here. Modify as appropriate. 
+% Do not mix SearchPath with the deprecated "prefix" feature. 
+ 
+SearchPath 
+ /home/webadmin/Commerce_Init-Test_2015-11/html/data/fonts 
+ /home/webadmin/Commerce_Init-Test_2015-11/html/data/ 
+ /home/webadmin/Commerce_Init-Test_2015-11/html/data/images 
+% C:/psfonts 
+% d:/myimagefolder 
+. 
+ 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% The AFM font metrics section, one line per font in the format 
+% <fontname>=<filename> 
+% Note that PostScript font names must not contain any blank character 
+ 
+FontAFM 
+. 
+ 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% The PFM font metrics section, one line per font in the format 
+% <fontname>=<filename> 
+% Note that PostScript font names must not contain any blank character 
+ 
+FontPFM 
+%Poetica-ChanceryI=Poetica-ChanceryI.pfm 
+HelveticaNeue-Roman=hlr_____.PFM 
+HelveticaNeue-Bold=hlb_____.PFM 
+HelveticaNeue-Medium=hlm_____.PFM 
+. 
+ 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% The PostScript, TrueType, and OpenType font outline section, one line per 
+% font in the format 
+% <fontname>=<filename> 
+% Note that PostScript font names must not contain any blank character, 
+% but TrueType font names may contain blank characters (and often do). 
+ 
+FontOutline 
+Code-128=Code_128.pfa  
+Gotham-Medium=GOTHMMED.TTF 
+Gotham-Book=GOTHMBOK.TTF 
+Gotham-Bold=GOTHMBOL.TTF 
+Gotham-LightItalic=GOTHMLIT.TTF 
+DaysInnSans-Bold=DaysInnSanBol.otf 
+DaysInnSans-BoldItalic=DaysInnSanBolIta.otf 
+DaysInnSans-Italic=DaysInnSanIta.otf 
+DaysInnSans-Regular=DaysInnSanRom.otf 
+Futura Bd TL=FuturaTL-Bold.TTF 
+Futura Bk TL=futuratl-book.ttf 
+FuturaTL-Bold=FuturaTL-Bold.TTF 
+FuturaTL-Book=futuratl-book.ttf 
+FuturaTL-Medium=futuratl-medium.ttf 
+MyriadPro-It=MyriadPro-It.otf 
+Myriad-Roman=MyriaRom.otf 
+Myriad=Myriad.otf 
+MyriadPro-Bold=MyriadPro-Bold.otf 
+MyriadPro-Regular=MyriadPro-Regular.otf 
+ITCSymbolStd-Bold=ITCSymbolStd-Bold.otf 
+ITCSymbolStd-Medium=ITCSymbolStd-Medium.otf 
+ITCSymbolStd-BoldItalic=ITCSymbolStd-BoldItalic.otf 
+Arial Narrow=Arial Narrow.ttf 
+Arial Black=ariblk.ttf 
+Arial Bold=arialbd.ttf 
+Arial Bold Italic=arialbi.ttf 
+GothamRounded-Medium=GothamRnd-Medium.otf 
+GothamRounded-Book=GothamRnd-Book.otf 
+GothamRounded-Bold=GothamRnd-Bold.otf 
+Helvetica-Black=Helvetica-Black.otf 
+Helvetica=Helvetica.otf 
+helvetica=Helvetica.otf 
+Helvetica-BlackOblique=Helvetica-BlackOblique.otf 
+HelveticaNeue-Roman=HelveticaNeue-Roman.otf 
+HelveticaNeue-Bold=HelveticaNeue-Bold.otf 
+HelveticaNeue-Medium=HelveticaNeue-Medium.otf 
+Frutiger-Bold-SC700=Frutiger-Bold.otf 
+FrutigerLTStd-Roman-SC700=frutigerltstd-roman.otf 
+Frutiger-Bold=Frutiger-Bold.otf 
+Frutiger-Light=Frutiger-Light.otf 
+Frutiger-LightCn=Frutiger-LightCn.otf 
+FrutigerLTStd-Roman=frutigerltstd-roman.otf 
+Garamond Bold=GARABD.TTF 
+Garamond-Bold=GARABD.TTF 
+Garamond-Book=GARA.TTF 
+Zurich BT=zurchn.ttf 
+Zurich-BT=zurchn.ttf 
+Garamond-Bold-SC700=GARABD.TTF 
+Century-Light=Century-Light.otf 
+Leawood-Medium=Leawood-Medium.otf 
+Palatino-Linotype-Bold=PALAB.TTF 
+AntiqueOliveStd-BoldCond=AntiqueOliveStd-BoldCond.otf 
+FranklinGothic-Demi=franklin-gothic-demi.ttf 
+FranklinGothic-Heavy=FRAHV.TTF 
+FranklinGothic-Book=Franklin Gothic Book.ttf 
+Gotham-Black=gothamblack.otf 
+Gotham-Bold=GOTHMBOL.TTF 
+Gotham-BoldItalic=GOTHMBIT.TTF 
+TikiIsland=font.ttf 
+Chianti Bold BT=tt1212m0_0.ttf 
+Chianti BT=TT1210M0_0.TTF 
+Chianti-BT=TT1210M0_0.TTF 
+Chianti-Bold-BT=tt1212m0_0.ttf 
+FatFrank=FATFRANK.OTF 
+JamesFajardo=JAMESFAJARDO.TTF 
+NeoSansStd-Light=NEOSANSSTD-LIGHT.OTF 
+ImpactLabel=IMPACTLABEL.TTF
+TradeGothicLTStd=TradeGothicLTStd.otf
+TradeGothicLTStd-Bd2=TradeGothicLTStd-Bd2.otf
+GillSansStd=GillSansStd.otf
+FSLola-Bold=FSLola-Bold.otf
+FSLola=FSLola.otf
+PrioriSanBold=PRIORISANBOLD.TTF
+PrioriSanRegular=PRIORISANREGULAR.TTF
+BrandonGrotesque-Medium=Brandon_med.otf
+BrandonGrotesque-Regular=Brandon_reg.otf
+BrandonGrotesque-Regular-RLH=Brandon_reg_RLH.otf
+BrandonGrotesque-Bold=Brandon_bld.otf
+BrandonGrotesque-Black=Brandon_blk.otf
+DINPro-Regular=DINPro-Regular_13937.ttf
+DINPro-Medium=DINPro-Medium_13936.ttf
+DINPro-Light=DINPro-Light_13935.ttf
+DINPro-Bold=DINPro-Bold_13934.ttf
+DINPro-Black=DINPro-Black_13933.ttf
+DINPro-Medium-RLH=DINPro-Medium_13936_RLH.ttf
+PF_DinText_Pro=Parachute-PFDin_TextPro-Bold.otf
+. 
+ 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% The Encoding section, one line per encoding in the format 
+% <encodingname>=<filename> 
+% This will only rarely be required since PDFlib contains a lot of built-in 
+% encodings. 
+ 
+Encoding 
+%cp0874=cp0874.cpg 
+. 
+ 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% The ICCProfile section lists the names of known ICC color profiles in the 
+% format 
+% <encodingname>=<filename> 
+ 
+ICCProfile 
+%highspeedprinter=cmykhighspeed.icc 
+. 
+ 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% The StandardOutputIntent section lists the names of known standard output 
+% intents for PDF/X. This will only be used when standard intent names other 
+% than those known to PDFlib internally will be used. 
+% format 
+% <intentname>=<description> 
+ 
+StandardOutputIntent 
+. 

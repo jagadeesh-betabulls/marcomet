@@ -1,0 +1,215 @@
+.contentsitem {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000099;
+	text-decoration: none
+; padding-left: 6px; border-left-width: 10px
+}
+.label { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: bold; color: #000000; text-decoration: none }
+.Title {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #660000; font-weight: bold}
+.redbottom{	border-bottom-color : Red;	border-bottom-width : 1px;	border-bottom-style : solid}
+.mastlabel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none ;
+	text-align: right;
+	background-color: #84D1E1;
+	vertical-align : middle;
+}
+.mastentry {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none ;
+	text-align: left;
+	background-color: #84D1E1
+}
+.footerentry {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none ;
+	text-align: left;
+	background-color: #84D1E1
+}
+.logocaption {  font-family: Arial, Helvetica, sans-serif; font-size: 9pt; background-position: left top; font-weight: bolder; color: #333333; vertical-align: top; text-align: left}
+.mastbutton { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; background-position: left center; font-weight: bolder; color: #333333; vertical-align: middle; text-align: left }
+.maintitle { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; font-weight: bold; color: #000099; text-decoration: none ; text-align: left; background-color: #84D1E1 }
+.contentstitle { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; font-weight: bold; color: #000099; text-decoration: none ; text-align: left}
+.footer { font-family: Arial, Helvetica, sans-serif; font-size: 7pt; background-position: center bottom; font-weight: bold; color: #000000; vertical-align: text-bottom; text-align: center}
+.innerfooter { font-family: Arial, Helvetica, sans-serif; font-size: 7pt; background-position: center bottom; font-weight: bold; color: #000000; vertical-align: text-bottom; text-align: center ; background-color: #84D1E1}
+A:link { text-decoration: none; color:#000099}
+A.graybutton:link {
+	text-decoration: none;
+	color : Maroon;
+}
+A:active { 	text-decoration:none; }
+A:visited{	text-decoration:none; color:#000099}
+.body:visited{	text-decoration:none; }
+A:hover{color:red;}
+.planheader1 {
+	font-family: Arial;
+	font-size: 8pt;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: #666666;
+	border: solid;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	border-width: thin 0px 0px thin;
+	border-color: #000000 black black #000000
+}
+.lineitems {
+                            color:black;
+                            font-size:9pt;
+                            font-weight:bold;
+                            font-family:Arial, Verdana, Geneva;
+							border : thin ridge;
+								padding : 0px 0px 0px 3px;
+								}			
+.lineitemsgrey {
+                            color:gray;
+                            font-size:9pt;
+                            font-weight:bold;
+                            font-family:Arial, Verdana, Geneva;
+							border : thin ridge;
+								padding : 0px 0px 0px 3px;
+								}			
+.lineitemsselected {
+	color:black;
+	font-size:9pt;
+	font-weight:bold;
+	font-family:Arial, Verdana, Geneva;
+	border : thin ridge;
+	padding : 0px 0px 0px 3px;
+	background-color : #FFEBCD;
+}																							
+.tableheader {
+	font-family: Arial;
+	font-size: 9pt;
+	font-weight: bolder;
+	color: #000099;
+	background-color: #84D1E1;
+	border: thin none #FFFFFF;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 0px;
+	padding-right: 0pt;
+	padding-bottom: 0px;
+	padding-left: 0pt;
+	margin-top: 0px;
+	margin-right: 0;
+	margin-bottom: 0px;
+	margin-left: 0;
+	text-indent: 6pt
+}
+.lineitem { color:black; font-size:8pt; font-weight:normal; font-family:Arial, Verdana, Geneva; border : 0px ridge; padding : 0px 0px 0px 3px; }
+.lineitemcenter {
+	color:black;
+	font-size:8pt;
+	font-weight:normal;
+	font-family:Arial, Verdana, Geneva;
+	border : 0px ridge;
+	padding : 0px 0px 0px 3px;
+	text-align : center;
+}
+.lineitemcenteralt {
+	color:black;
+	font-size:8pt;
+	font-weight:normal;
+	font-family:Arial, Verdana, Geneva;
+	border : 0px ridge;
+	padding : 0px 0px 0px 3px;
+	text-align : center;
+}
+.readonlytext { color:black; font-size:9pt; font-weight:normal; font-family:Arial, Verdana, Geneva; border : 0px ridge; padding : 0px 0px 0px 3px; }
+.subtitle{
+			font-family : Arial;
+	font-weight : bolder;
+	font-size : 11pt;
+		color : Black;
+}
+body{
+			font-family : Arial, Helvetica, sans-serif;
+	font-size : 9pt;
+		color : #000099;
+; vertical-align: top
+; font-style: normal; font-weight: normal; font-variant: normal
+}
+table.spreadsheet{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 8pt;
+	color : Black;
+	vertical-align: top;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	border : thin ridge;
+	padding-bottom : 0px;
+	padding-top : 0px;
+	padding-right : 0px;
+	padding-left : 0px;
+	background-color : White;
+}
+.planheader2{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 8pt;
+	color : Black;
+	vertical-align: middle;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	border : thin ridge;
+	padding-bottom : 0px;
+	padding-top : 0px;
+	padding-right : 0px;
+	padding-left : 4px;
+	background-color : White;
+	;
+	margin-left: 4px
+}
+.bottomborderlabel { color:black; font-size:9pt; font-weight:bold; font-family:Arial, Verdana, Geneva; border : solid; padding : 0px 0px 0px 3px; ; border-width: 0px 0px 1px; border-color: black black #333333}
+.bottombordertext { color:black; font-size:9pt; font-weight:normal; font-family:Arial, Verdana, Geneva; border : solid; padding : 0px 0px 0px 3px; ; border-width: 0px 0px 1px; border-color: black black #333333 }
+.lineitemalt {
+	color:black;
+	font-size:8pt;
+	font-weight: normal;
+	font-family:Arial, Verdana, Geneva;
+	border : 0px ridge;
+	padding : 0px 0px 0px 3px;
+;
+	background : #CCCCCC;
+}
+.graybutton
+{
+	border-style: solid;
+	border-width : 1px 1px 1px 1 px;
+	font-weight: bold;
+	color:black;
+	font-size:8pt;
+	border-color: Black Black Black Black;
+	font-family:Arial,Verdana,Geneva;
+	text-decoration:none;
+	background-color : #A9A9A9;
+	font : bold;
+	text-align : center;
+	width : 8%;
+	border : thin outset;
+}.list { font-family : Arial, Helvetica, sans-serif; font-size : 9pt; color : #000099; ; vertical-align: top ; font-style: normal; font-weight: normal; font-variant: normal ; list-style-position: inside; list-style-type: disc; list-style-image: none}
+.bodyBlack { font-family : Arial, Helvetica, sans-serif; font-size : 9pt; color : #000000; ; vertical-align: top ; font-style: normal; font-weight: normal; font-variant: normal }
+.listblackNumbered { font-family : Arial, Helvetica, sans-serif; font-size : 9pt; color : #000000; ; vertical-align: top ; font-style: normal; font-weight: normal; font-variant: normal ; list-style-position: outside; list-style-type: decimal; list-style-image: none }
+.minderheader { font-family: Arial; font-size: 9pt; font-weight: bolder; color: #000099; background-color: #84D1E1; border: thin none #FFFFFF; text-decoration: none; text-align: center; padding-top: 0px; padding-right: 0pt; padding-bottom: 0px; padding-left: 0pt; margin-top: 0px; margin-right: 0; margin-bottom: 0px; margin-left: 0}
+.minderLink { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; color: #000099; text-decoration: none ; padding-right: 5px; padding-left: 5px; border-right-width: 5px; border-left-width: 5px}

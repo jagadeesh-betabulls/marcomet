@@ -1,0 +1,175 @@
+<html>
+<head>
+	<title>Books</title>
+	<link href="css/dhtmlXGrid.css" rel="stylesheet" type="text/css">
+	<style>
+		a {
+			font-family: arial, verdana;
+			font-size: 8pt;
+		}
+	</style>
+	<script src="js/dhtmlXCommon.js" type="text/javascript"></script>
+	<script src="js/dhtmlXGrid.js" type="text/javascript"></script>
+	<script src="js/dhtmlXGridCell.js" type="text/javascript"></script>
+	<script>
+		var loadDataURL = "action.jsp?type=createXML";
+		var actionURL = "action.jsp";
+		var authorsURL = "action.jsp?type=getAuthorsList";
+		var mygrid;
+		var timeoutHandler;//update will be sent automatically to server if row editting was stoped;
+		var rowUpdater;//async. Calls doUpdateRow function when got data from server
+		var rowEraser;//async. Calls doDeleteRow function when got confirmation about row deletion
+		var authorsLoader;//sync. Loads list of available authors from server to populate dropdown (co)
+		var mandFields = [0,1,1,0,0]
+		
+			//initialise (from xml) and populate (from xml) grid
+		function doOnLoad(){
+			mygrid = new dhtmlXGridObject('gridbox');
+		 	mygrid.setImagePath("../../imgs/"); 
+			//set columns properties
+			mygrid.setHeader("In store,Book Title,Author,Year,Price");
+			mygrid.setColTypes("ch,ed,co,ed,price");
+			mygrid.setInitWidths("50,250,170,70,50")
+			mygrid.setColAlign("center,left,left,center,right")
+			mygrid.setColumnColor("#f7f6f0,#ffffff,#f7f6f0")
+			//set grid event handlers
+			mygrid.setOnEditCellHandler(doOnCellEdit)
+			//populte combobox with values 
+			populateCombo();
+			//load grid content
+			mygrid.loadXML(loadDataURL);
+			mygrid.init()
+			//set loaders
+			rowUpdater = new dtmlXMLLoaderObject(doUpdateRow,window);
+			rowEraser = new dtmlXMLLoaderObject(doDeleteRow,window);
+		}
+		
+		//load co (combobox) content from server and populate
+		function populateCombo(){
+			var combo = mygrid.getCombo(2);
+			combo.clear()
+			authorsLoader = new dtmlXMLLoaderObject(null,null,false);//sync mode
+			authorsLoader.loadXML(authorsURL);
+			var root = authorsLoader.getXMLTopNode("authors");
+			for(var i=0;i<root.childNodes.length;i++){
+				if(root.childNodes[i]!=null && root.childNodes[i].tagName=="author"){
+					combo.put(root.childNodes[i].getAttribute("value"),root.childNodes[i].firstChild.nodeValue)
+				}
+			}
+			
+		}
+		
+		//onCellEdit event handler (mark row updated and send update to server)
+		function doOnCellEdit(state, rowId, cellInd) {
+			//just clear timeout and allow editting, when editor is going to be opened
+			if (state == 0){ 
+				clearTimeout(timeoutHandler)
+				return true;
+			}
+			//process end of editing
+			else if (state == 2 || (mygrid.cells(rowId, cellInd).isCheckbox() && state==1)) {//editor closed or checkbox checked\unchecked
+				var val = mygrid.cells(rowId,cellInd).getValue();
+				//if value was chnaged - mark row as chnaged
+				if(mygrid.cells(rowId,cellInd).wasChanged() || mygrid.cells(rowId, cellInd).isCheckbox()){
+					mygrid.setRowTextBold(rowId);
+					mygrid.setUserData(rowId,"changed","1")
+					mygrid.cells(rowId,cellInd).cell.wasChanged = false;//return chnage state to false
+				}
+				//reinitialize timeout when editor was closed
+				if(mygrid.getUserData(rowId,"changed") && mygrid.getUserData(rowId,"changed")=="1")
+					timeoutHandler = setTimeout(function(){sendServerUpdateRequest(rowId)},1000);
+					return true;
+			}
+		}
+		//send server request for upating/creating row
+		function sendServerUpdateRequest(rId){
+			var rowValuesAr = new Array();
+			var fl = true;//proceed with server request
+			for(var i=0;i<mygrid.getColumnCount();i++){
+				var val = mygrid.cells(rId,i).getValue();
+				if(mandFields[i]==true){//if mandatory field is not filled - do not proceed
+					if(val==""){
+						mygrid.cells(rId,i).cell.style.borderColor = "red";
+						fl = false;
+					}else{
+						mygrid.cells(rId,i).cell.style.borderColor = "";
+					}
+					
+				}
+				rowValuesAr[rowValuesAr.length] = val
+			}
+			if(!fl)
+				return;
+			if(mygrid.getUserData(rId,"new")=="1"){
+				var action = "add";
+			}
+			var url = actionURL+"?type="+(!action?"update":action)+"&id="+rId+"&values="+rowValuesAr.join("|")
+			//alert(url)
+			mygrid.setEditable(false)
+			rowUpdater.loadXML(url);
+		}
+		
+		//Add row into grid
+		function addNewRow() {
+			var newId = Date.parse(new Date());
+			mygrid.addRow(newId);//add empty row
+			mygrid.setUserData(newId,"new","1");//mark row as NEW
+			mygrid.selectCell(mygrid.getRowIndex(newId),1,true,false,true)//put cursor into 2nd cell in new row
+		}
+		
+		//Mark row for deletion and send request to server 
+		function deleteRow() {
+			var rId = mygrid.getSelectedId();
+			mygrid.setRowTextBold(rId);
+			mygrid.setRowTextStyle(rId, "text-decoration: line-through;");
+			var url = actionURL+"?type=delete&id="+rId;
+			rowEraser.loadXML(url);//send request for deletion
+		}
+		
+		
+		//update clinet side after row was saved on server
+		function doUpdateRow() {
+			var root = rowUpdater.getXMLTopNode("status");
+			var oldId = root.getAttribute("oldid")
+			var rowId = root.getAttribute("rowid")
+			mygrid.setRowId(mygrid.getRowIndex(oldId),rowId)//set new row id (if it was chnaged for new row)
+			mygrid.setRowTextNormal(rowId);
+			mygrid.setUserData(rowId,"changed","0")
+			mygrid.setUserData(rowId,"new","0")
+			mygrid.setEditable(true)
+		}
+		//delete row from grid after it was delete on server
+		function doDeleteRow() {
+			var root = rowEraser.getXMLTopNode("status");
+			var oldId = root.getAttribute("oldid")
+			mygrid.deleteRow(oldId);
+		}
+	</script>
+</head>
+
+<body onload="doOnLoad()">
+<h1>dhtmlxGrid Sample with Database</h1>
+<table border=0 cellpadding=0 cellspacing=0>
+	<tr>
+		<td>
+			<table border=0>
+				<tr><td><div id="gridbox" height="230px" width="600px"></div></td></tr>
+				<tr><td>
+					<a href="javascript:void(0);" onclick="addNewRow();">add</a>
+					<a href="javascript:void(0);" onclick="deleteRow();">delete</a>
+				</td></tr>
+				<tr>
+                    <td>
+                        (Info) Current sample uses single thread for sending/receiving data to/from server. 
+                        So, only one row at a time can be edited. <br />For multithread implementation use dhtmlxDataProcessor or modify this sample on your own.
+                    </td>
+                </tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<br>
+<hr>
+&copy;Scand LLC
+</body>
+</html>

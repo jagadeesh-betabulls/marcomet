@@ -1,0 +1,272 @@
+TD.LIST-HEADER
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #ffffff;
+	text-indent: 5pt;
+	height: 17px;
+	BACKGROUND-COLOR: #757575;
+}	
+.text-row1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	height: 20px;
+	Valign: middle;
+	text-indent: 3pt;
+	BACKGROUND-COLOR: #cccccc;
+	vertical-align: middle;
+}
+.text-row2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	height: 15px;
+	text-indent: 3pt;
+	Valign: middle;
+	BACKGROUND-COLOR: #ffffff;
+	vertical-align: middle;
+}
+INPUT.Field-Data
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: arial;
+    BACKGROUND-COLOR: white;
+	
+
+}
+INPUT.Field-Button
+{
+	font-size: 9px;
+	color: black;
+	font-family: verdana;
+}
+INPUT.Check
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: arial;
+    BACKGROUND-COLOR: #ebebeb;
+	BORDER: none;
+}
+.Text-Area
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: white;
+}
+Input.TextBox
+{
+    FONT-FAMILY: Verdana, Helvetica, sans-serif;
+    FONT-SIZE: 10px;
+    height: 17;
+    FONT-WEIGHT: normal;
+    BORDER: 1px solid;
+    
+}
+.Select-List
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: arial;
+    BACKGROUND-COLOR: white;
+}
+.headingnews {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+	list-style-image: url(images/bullet.gif);
+
+}
+.date {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+}
+.newstext {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+}
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+.textlb {        
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #AAAAAA;
+}
+.textpg {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #FFFFFF;
+}
+a.textlb:link {
+    color: #FFFFFF;
+  }
+a.textlb:visited {
+    color: #FFFFFF;
+}
+.text-list {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	height: 15px;
+}
+.linksupper {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #FFFFFF;
+}
+.linksupperblack {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+
+}
+.header {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+.sidelink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	list-style-image: url(images/bullet.gif);
+
+}
+.sidemenu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+
+}
+.bulletedtext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	list-style-image: url(images/bullet1.gif);
+}
+a:link {
+	color: #000000;
+	text-decoration: underline;
+}
+a:hover {
+	color: #DF0303;
+}
+a:visited {
+	color: #B4B188;
+	text-decoration: underline;
+}
+.heading1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+}
+.heading1-list {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+	height: 17px;
+	BACKGROUND-COLOR: #CED2BD;
+}
+.heading2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: bold;
+	color: #000000;
+}
+.minderheaderleft {
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: bolder;
+	color: White;
+	background-color: #4c0500;
+	border: thin none #FFFFFF;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 0px;
+	margin-right: 0;
+	margin-bottom: 0px;
+	margin-left: 10px;
+	letter-spacing : 0px;
+	border-right : 1px solid #B4B188;
+	border-bottom-color : #B4B188;
+	border-bottom-style : solid;
+	border-bottom-width : 3px; 
+	}
+	
+TD.table-heading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #ffffff;
+	text-indent: 1pt;
+	height: 17px;
+	padding-left: 3px; 
+	background-color: #4c0500;
+	padding-right: 3px;
+	text-align: left;
+	border-bottom-width: 3px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color: #B4B188;
+
+}
+
+TD.table-subheading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-indent: 1pt;
+	height: 17px;
+	background-color: #4c0500;
+	padding-left: 3px;
+	padding-right: 3px;
+	text-align: left;
+
+}
+.bordertable {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+
+table.sortable a.sortheader {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+}
+table.sortable span.sortarrow {
+    color: black;
+    text-decoration: none;
+}
